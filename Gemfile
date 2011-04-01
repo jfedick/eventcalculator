@@ -13,6 +13,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 #devise
 gem 'devise'
 
+#taps
+gem 'taps', '>= 0.3.20'
+
 # Deploy with Capistrano
 # gem 'capistrano'
 
