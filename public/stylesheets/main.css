@@ -50,3 +50,7 @@ text-align:center;
 .notice {
   text-align:center;
 }
+
+.label {
+  font-family: 'Yanone Kaffeesatz', arial, serif;  
+}
