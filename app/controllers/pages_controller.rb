@@ -97,7 +97,7 @@ class PagesController < ApplicationController
          random_number_4 = rand(9)
          results = "Event #{random_number_4} happened" + results
        when 9
-         results = " in region 9"
+         results = " in region 10"
          random_number_3 = rand (9)
          if random_number_3 === 0..4
            results = results + " in section A."
