@@ -19,7 +19,7 @@ class PagesController < ApplicationController
        when 1
          results = " in region 2"
          random_number_3 = rand (9)
-         if random_number_3 === (0..2)
+         if (0..2).include?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
        when 2
          results = " in region 3"
          random_number_3 = rand (9)
-         if random_number_3 === (0..1)
+         if (0..1).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -39,7 +39,7 @@ class PagesController < ApplicationController
        when  3
          results = " in region 4"
          random_number_3 = rand (9)
-         if random_number_3 === (0..7)
+         if (0..7).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -49,7 +49,7 @@ class PagesController < ApplicationController
        when 4
          results = " in region 5"
          random_number_3 = rand (9)
-         if random_number_3 === (0..4)
+         if (0..4).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -59,7 +59,7 @@ class PagesController < ApplicationController
        when 5
          results = " in region 6"
          random_number_3 = rand (9)
-         if random_number_3 === (0..3)
+         if (0..3).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -69,7 +69,7 @@ class PagesController < ApplicationController
        when 6
          results = " in region 7"
          random_number_3 = rand (9)
-         if random_number_3 === (0..3)
+         if (0..3).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -79,7 +79,7 @@ class PagesController < ApplicationController
        when 7
          results = " in region 8"
          random_number_3 = rand (9)
-         if random_number_3 === (0..6)
+         if (0..6).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -89,7 +89,7 @@ class PagesController < ApplicationController
        when 8
          results = " in region 9"
          random_number_3 = rand (9)
-         if random_number_3 === (0..4)
+         if (0..4).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
@@ -99,7 +99,7 @@ class PagesController < ApplicationController
        when 9
          results = " in region 10"
          random_number_3 = rand (9)
-         if random_number_3 === (0..4)
+         if (0..4).includes?(random_number_3)
            results = results + " in section A."
          else
            results = results + " in section B."
