@@ -1,5 +1,7 @@
 Eventcalculator::Application.routes.draw do
 
+  get "events/add"
+
   devise_for :admins
 
   # The priority is based upon order of creation:
@@ -15,9 +17,12 @@ Eventcalculator::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :events
   
   match 'home'=> 'pages#home'
   match 'go' => 'pages#go'
+  match 'add_event' => 'events#add'
+  match 'add_event_region' => 'events#add_event_region'
   
   # Sample resource route with options:
   #   resources :products do

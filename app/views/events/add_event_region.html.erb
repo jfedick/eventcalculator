@@ -1,0 +1,6 @@
+<select id='section_id' name='section_id'>
+  <option value=''>No Section</option>
+  <% for section in @sections %>
+    <option value='<%= section.id %>'><%= section.name %></option>
+  <% end %>
+</select>

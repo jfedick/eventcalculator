@@ -1,0 +1,31 @@
+<h1>Add Event</h1>
+
+<%= form_for @event do |f| %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+<p>Region (<a href="/add_region">Add Region</a>)</p>
+<select name="event[region_id]" id="event_region_id">
+   <option value="">Select Region</option>
+   <% @regions.each do |region| %>
+      <option value="<%= region.id %>">
+         <%= region.name %>
+      </option>
+   <% end %>
+</select>
+
+<p>Section (<a href="/add_section">Add Section</a>)</p>
+<div id="section_id_container">
+   <select name="event[section_id]" id="event_section_id" disabled="disabled">
+      <option value="">No Section</option>
+   </select>
+</div>
+
+<%= observe_field("event_region_id",
+   :frequency => 0.25,
+   :update => "section_id_container",
+   :url => { :action => :add_event_region },
+   :with => "'region_id='+value") %>
+
+  <%= f.submit "Add Event!"%>
+<% end %>
