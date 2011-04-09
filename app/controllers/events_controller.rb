@@ -10,9 +10,10 @@ class EventsController < ApplicationController
   end
   
   def create
-    event = Event.new(params[:description])
-    event.section_id = Section.find(params[:section_id])
-    if event.save
+    @event = Event.new
+    @event.description = params[:event][:description]
+    @event.section_id = params[:section_id]
+    if @event.save
       flash[:notice] = "Event saved!"
       redirect_to "/add_event"
     else

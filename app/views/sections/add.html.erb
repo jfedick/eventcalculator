@@ -1,0 +1,8 @@
+<h1>Add Section</h1>
+
+<%= form_for @section do |f| %>
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+  <%= select("section", "region_id", @regions.map {|region| [region.name, region.id]})%>
+  <%= f.submit "Add Section!"%>
+<% end %>
