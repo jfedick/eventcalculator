@@ -2,7 +2,7 @@
 
 <%= form_for @section do |f| %>
   <%= f.label :name %>
-  <%= f.text_area :name %>
+  <%= f.text_field :name %>
   <%= select("section", "region_id", @regions.map {|region| [region.name, region.id]})%>
   <%= f.submit "Add Section!"%>
 <% end %>
