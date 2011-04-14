@@ -1,8 +1,11 @@
-<h1>Add Section</h1>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+
+<h1>Add Event Type</h1>
 
 <%= form_for @section do |f| %>
-  <%= f.label :name %>
+  <%= f.label "Type of Event", :style => "display:block;"%>
   <%= f.text_field :name %>
-  <%= select("section", "region_id", @regions.map {|region| [region.name, region.id]})%>
-  <%= f.submit "Add Section!"%>
+  <%= f.label "Region", :style => "display:block;"%>
+  <%= select("section", "region_id", @regions.map {|region| [region.name, region.id]}, {}, :class => :select)%>
+  <%= f.submit "Add Section!", :class => :button%>
 <% end %>

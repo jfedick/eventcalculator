@@ -1,7 +1,11 @@
-<h1>Add Region</h1>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
 
+
+<h1>Add Region</h1>
+<div class="new_event">
 <%= form_for @region do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit "Add Region!"%>
+  <%= f.label 'Region Name', :style => "display:block;" %>
+  <%= f.text_field :name %>  
+  <p><%= f.submit "Add Region!", :class => :button %></p>
 <% end %>
+</div>
