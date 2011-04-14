@@ -1,11 +1,13 @@
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+
 <h1>Add Event</h1>
 
 <%= form_for @event do |f| %>
   <%= f.label :description %>
   <%= f.text_area :description %>
 
-<p>Region (<a href="/add_region">Add Region</a>)</p>
-<select name="event[region_id]" id="event_region_id">
+Region (<a href="/add_region">Add Region</a>)
+<select name="event[region_id]" id="event_region_id", class="select">
    <option value="">Select Region</option>
    <% @regions.each do |region| %>
       <option value="<%= region.id %>">
@@ -14,10 +16,11 @@
    <% end %>
 </select>
 
-<p>Section (<a href="/add_section">Add Section</a>)</p>
+Type (<a href="/add_section">Add Type of Event</a>)
 <div id="section_id_container">
-   <select name="event[section_id]" id="event_section_id" disabled="disabled">
-      <option value="">No Section</option>
+   <select name="event[section_id]" id="event_section_id", class="select">
+     
+      <option value="">No Type Selected</option>
    </select>
 </div>
 
@@ -27,5 +30,5 @@
    :url => { :action => :add_event_region },
    :with => "'region_id='+value") %>
 
-  <%= f.submit "Add Event!"%>
+<p>  <%= f.submit "Add Event!", :class => :button%></p>
 <% end %>

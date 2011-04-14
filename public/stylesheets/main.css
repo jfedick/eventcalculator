@@ -1,3 +1,24 @@
+.select {
+  font-family: 'Yanone Kaffeesatz', arial, serif;
+  font-size:20px;
+  color:#000;
+  text-decoration:none;
+  display:block;
+  width:auto;
+  height:auto;
+  padding:10px;
+  border:1px solid #DDD;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+
+  background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EEE));
+  background:-moz-linear-gradient(0% 90% 90deg, #EEE, #FFF);
+  
+  margin-bottom:20px;
+}
+
 .small_button {
   font-family: 'Yanone Kaffeesatz', arial, serif;
   font-size:18px;
@@ -127,12 +148,23 @@ p {
 text-align:center;
 }
 
+form {
+  font-family: 'Yanone Kaffeesatz', arial, serif;  
+}
 .notice {
   text-align:center;
 }
-
-.label {
-  font-family: 'Yanone Kaffeesatz', arial, serif;  
+textarea {
+  margin-bottom:20px;
+  width:300px;
+  height:150px;
+}
+label {
+  font-family: 'Yanone Kaffeesatz', arial, serif; 
+  margin-top:20px;
+}
+.button {
+  margin-top:20px;
 }
 
 #new_event input, #new_event label, #new_event textarea, #new_event select {
