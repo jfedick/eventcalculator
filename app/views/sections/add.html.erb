@@ -7,5 +7,5 @@
   <%= f.text_field :name %>
   <%= f.label "Region", :style => "display:block;"%>
   <%= select("section", "region_id", @regions.map {|region| [region.name, region.id]}, {}, :class => :select)%>
-  <%= f.submit "Add Section!", :class => :button%>
+  <%= f.submit "Add Type!", :class => :button%>
 <% end %>
