@@ -1,6 +1,6 @@
 class RegionsController < ApplicationController
 
-  def add
+  def new
     @region = Region.new
     @regions = Region.all
   end

@@ -12,6 +12,7 @@
   -webkit-border-radius:5px;
   -o-border-radius:5px;
   border-radius:5px;
+  margin-top:5px;
 
   background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EEE));
   background:-moz-linear-gradient(0% 90% 90deg, #EEE, #FFF);
@@ -42,10 +43,9 @@
   font-size:26px;
   color:#000;
   text-decoration:none;
-  display:block;
-  width:auto;
-  height:auto;
+  text-align:center;
   padding:10px;
+  width: 180px;
   border:1px solid #DDD;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
@@ -100,16 +100,15 @@ a.button {
     font-size:30px;
     color:#000;
     text-decoration:none;
-    display:block;
-    width:478px;
+    width:160px;
     padding:10px;
     border:1px solid #DDD;
-    margin:auto;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     -o-border-radius:5px;
     border-radius:5px;
-
+    display:inline-block;
+    
     background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#EEE));
     background:-moz-linear-gradient(0% 90% 90deg, #EEE, #FFF);
 
@@ -158,12 +157,14 @@ textarea {
   margin-bottom:20px;
   width:300px;
   height:150px;
+  display:block;
 }
 label {
   font-family: 'Yanone Kaffeesatz', arial, serif; 
   margin-top:20px;
+  display:block;
 }
-.button {
+input.button {
   margin-top:20px;
 }
 

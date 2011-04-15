@@ -1,0 +1,29 @@
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+<%= link_to "Back", "/index", :class=>:button, :style => "display:block;"%>
+
+<h1>Event Edit</h1>
+
+<%= form_for @event do |f| %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+Region (<a href="/add_region">Add Region</a>)
+<select name="event[region_id]" id="event_region_id", class="select">
+   <% @regions.each do |region| %>
+      <option value="<%= region.id %>">
+         <%= region.name %>
+      </option>
+   <% end %>
+</select>
+
+Category (<a href="/add_category">Add Category</a>)
+<select name="event[category]" id="event_category_id", class="select">
+   <% @categories.each do |category| %>
+      <option value="<%= category.id %>">
+         <%= category.name %>
+      </option>
+   <% end %>
+</select>
+
+<%= f.submit "Update Event!", :class => :button%>
+<% end %>

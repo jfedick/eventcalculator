@@ -1,0 +1,16 @@
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+<%= link_to "Home", "/home", :class=>:button, :style => "display:block;"%>
+
+<h1>Index of Events</h1>
+
+<% @events.each do |event| %>
+  <h2>Description</h2>
+  <p><%= event.description %></p>
+  <h2>Region</h2>
+  <p><%= event.region.name %></p>
+  <h2>Category</h2>
+  <p><%= event.category.name %></p>
+  <p><%= link_to "Edit", edit_event_path(event)%> <%= link_to 'Delete', event,
+              :confirm => 'Are you sure?', :method => :delete %>
+  <hr style="border:1px solid black;">
+  <% end%>

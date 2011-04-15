@@ -18,15 +18,16 @@ Eventcalculator::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :events
-  resources :sections
   resources :regions
+  resources :categories
   
   match 'home'=> 'pages#home'
   match 'go' => 'pages#go'
-  match 'add_event' => 'events#add'
+  match 'add_event' => 'events#new'
   match 'add_event_region' => 'events#add_event_region'
-  match 'add_region' => 'regions#add'
-  match 'add_section' => 'sections#add'
+  match 'add_region' => 'regions#new'
+  match 'index' => 'events#index'
+  match 'add_category' => 'categories#new'
   
   # Sample resource route with options:
   #   resources :products do

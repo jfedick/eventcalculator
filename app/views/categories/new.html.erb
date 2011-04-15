@@ -1,0 +1,12 @@
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+<%= link_to "Back", "/add_event", :class=>:button, :style => "display:block;"%>
+
+
+<h1>Add Category</h1>
+<div class="new_event">
+<%= form_for @category do |f| %>
+  <%= f.label 'Category Name', :style => "display:block;" %>
+  <%= f.text_field :name %>  
+  <p><%= f.submit "Add Category!", :class => :button %></p>
+<% end %>
+</div>
