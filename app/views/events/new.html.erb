@@ -1,4 +1,5 @@
 <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css' />
+<%= link_to "Home", "/home", :class=>:button, :style => "display:block;"%>
 
 <h1>Add Event</h1>
 
@@ -16,19 +17,16 @@ Region (<a href="/add_region">Add Region</a>)
    <% end %>
 </select>
 
-Type (<a href="/add_section">Add Type of Event</a>)
-<div id="section_id_container">
-   <select name="event[section_id]" id="event_section_id", class="select">
-     
-      <option value="">No Type Selected</option>
-   </select>
-</div>
-
-<%= observe_field("event_region_id",
-   :frequency => 0.25,
-   :update => "section_id_container",
-   :url => { :action => :add_event_region },
-   :with => "'region_id='+value") %>
+Category (<a href="/add_category">Add Category</a>)
+<select name="event[category]" id="event_category_id", class="select">
+   <option value="">Select Category</option>
+   <% @categories.each do |category| %>
+      <option value="<%= category.id %>">
+         <%= category.name %>
+      </option>
+   <% end %>
+</select>
 
 <p>  <%= f.submit "Add Event!", :class => :button%></p>
 <% end %>
+
